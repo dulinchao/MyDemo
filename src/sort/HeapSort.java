@@ -1,3 +1,5 @@
+package sort;
+
 public class HeapSort {
     /**
      * 用于每一次构造一个大顶堆

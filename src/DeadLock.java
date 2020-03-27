@@ -1,8 +1,6 @@
 import java.util.concurrent.TimeUnit;
 
 public class DeadLock {
-
-
     public static void main(String[] args) {
         Object lock1 = new Object();
         Object lock2 = new Object();
