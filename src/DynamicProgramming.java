@@ -1,5 +1,7 @@
-
-public class App4 {
+/**
+ * 老闭给的动态规划秘籍
+ */
+public class DynamicProgramming{
 	
 	public static int Test1(int[] price,int budget)
 	{
