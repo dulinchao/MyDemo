@@ -1,22 +1,25 @@
 import Tree.TreeNode;
 import Tree.TreeUtils;
+import com.sun.org.apache.bcel.internal.generic.LUSHR;
 
 import java.util.*;
-
 public class Solution {
-    public int threeSumClosest(int[] nums,int target) {
-        Arrays.sort(nums);
-        int res = Integer.MAX_VALUE;
-        for (int i = 0; i < nums.length; i++) {
-            int l = i+1;
-            int r = nums.length-1;
-            while(l<r){
-                int sum = nums[i]+nums[l]+nums[r];
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode cur = dummyHead;
+        while(l1!=null && l2!=null){
+            if(l1.val<l2.val){
+                cur.next = l1;
+                l1 = l1.next;
+            }else {
+                cur.next = l2;
+                l2 = l2.next;
             }
+            cur.next.next = null;
+            cur = cur.next;
         }
+        if(l1!=null) cur.next = l1;
+        if(l2!=null) cur.next = l2;
+        return dummyHead.next;
     }
-
-//    public static void main(String[] args) {
-//        System.out.println(new Solution().minWindow("bbaac", "aba"));
-//    }
 }
