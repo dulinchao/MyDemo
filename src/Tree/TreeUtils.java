@@ -22,8 +22,8 @@ public class TreeUtils {
                 cur.left = temp;
                 queue.offer(temp);
             }
-            if(index++>=nums.length) break;
-            if(nums[index]!=null) { //第一个节点不为null则放到左节点并入队
+            if(++index>=nums.length) break;
+            if(nums[index]!=null) { //第一个节点不为null则放到右节点并入队
                 TreeNode temp = new TreeNode(nums[index]);
                 cur.right = temp;
                 queue.offer(temp);
